@@ -1,0 +1,8 @@
+{
+    "include": ["src", "tests"],
+    "exclude": ["**/__pycache__/**", "kubernetes/**"],
+    "reportMissingTypeStubs": false,
+    "pythonVersion": "3.8",
+    "typeCheckingMode": "basic",
+    "reportUnknownMemberType": false,
+}

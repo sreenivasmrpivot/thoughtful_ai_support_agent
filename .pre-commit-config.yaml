@@ -1,0 +1,26 @@
+# .pre-commit-config.yaml
+
+repos:
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.0.260  # Use the latest Ruff version
+    hooks:
+      - id: ruff
+        args: ["--fix"]
+
+  - repo: https://github.com/pre-commit/mirrors-pyright
+    rev: v1.1.282  # Use the latest Pyright version
+    hooks:
+      - id: pyright
+        name: Pyright type checker
+        entry: pyright
+        language: system
+        types: [python]
+
+  - repo: https://github.com/pre-commit/mirrors-pytest
+    rev: v6.2.5  # Use the latest Pytest version
+    hooks:
+      - id: pytest
+        name: Run Pytest
+        entry: pdm run test
+        language: system
+        types: [python]
